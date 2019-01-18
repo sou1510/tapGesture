@@ -14,6 +14,7 @@
 		830D8F66218FFC0900F690DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 830D8F64218FFC0900F690DD /* LaunchScreen.storyboard */; };
 		830D8F71218FFC0900F690DD /* swifttestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830D8F70218FFC0900F690DD /* swifttestTests.swift */; };
 		830D8F7C218FFC0900F690DD /* swifttestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830D8F7B218FFC0900F690DD /* swifttestUITests.swift */; };
+		830D8F8C218FFC3D00F690DD /* ctest.c in Sources */ = {isa = PBXBuildFile; fileRef = 830D8F8B218FFC3D00F690DD /* ctest.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,9 @@
 		830D8F77218FFC0900F690DD /* swifttestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swifttestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		830D8F7B218FFC0900F690DD /* swifttestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swifttestUITests.swift; sourceTree = "<group>"; };
 		830D8F7D218FFC0900F690DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		830D8F89218FFC3C00F690DD /* swifttest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swifttest-Bridging-Header.h"; sourceTree = "<group>"; };
+		830D8F8A218FFC3D00F690DD /* ctest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ctest.h; sourceTree = "<group>"; };
+		830D8F8B218FFC3D00F690DD /* ctest.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ctest.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,9 @@
 				830D8F62218FFC0900F690DD /* Assets.xcassets */,
 				830D8F64218FFC0900F690DD /* LaunchScreen.storyboard */,
 				830D8F67218FFC0900F690DD /* Info.plist */,
+				830D8F8A218FFC3D00F690DD /* ctest.h */,
+				830D8F8B218FFC3D00F690DD /* ctest.c */,
+				830D8F89218FFC3C00F690DD /* swifttest-Bridging-Header.h */,
 			);
 			path = swifttest;
 			sourceTree = "<group>";
@@ -193,6 +200,7 @@
 				TargetAttributes = {
 					830D8F57218FFC0600F690DD = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0930;
 					};
 					830D8F6B218FFC0900F690DD = {
 						CreatedOnToolsVersion = 9.3.1;
@@ -256,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				830D8F8C218FFC3D00F690DD /* ctest.c in Sources */,
 				830D8F5E218FFC0600F690DD /* ViewController.swift in Sources */,
 				830D8F5C218FFC0600F690DD /* AppDelegate.swift in Sources */,
 			);
@@ -430,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = swifttest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -438,6 +448,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sou.jp.swifttest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "swifttest/swifttest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -447,6 +459,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = swifttest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -455,6 +468,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sou.jp.swifttest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "swifttest/swifttest-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
